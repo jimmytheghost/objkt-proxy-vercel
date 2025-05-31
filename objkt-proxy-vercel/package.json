@@ -1,8 +1,12 @@
 {
-  "name": "objkt-proxy-vercel",
-  "version": "1.0.0",
+  "name": "objkt-proxy",
   "type": "module",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
   "dependencies": {
+    "express": "^4.18.2",
     "node-fetch": "^3.3.2"
   }
 }
