@@ -1,6 +1,14 @@
-FROM php:8.2-cli
+# Use official Node.js image
+FROM node:18
 
+# Set working directory
 WORKDIR /app
-COPY . /app
 
-CMD [ "php", "-S", "0.0.0.0:8080", "index.php" ]
+# Copy files
+COPY . .
+
+# Install dependencies
+RUN npm install
+
+# Start the server
+CMD ["npm", "start"]
