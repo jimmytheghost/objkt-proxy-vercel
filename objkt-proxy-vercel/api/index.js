@@ -1,9 +1,8 @@
-// File: api/index.js
-
 export default async function handler(req, res) {
-  // Allow cross-origin requests
+  // ✅ FULL CORS HEADER FIX
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
 
   if (req.method === 'OPTIONS') {
     res.status(200).end();
